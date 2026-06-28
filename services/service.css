@@ -1,0 +1,164 @@
+.service-page { padding-top: 72px; background: var(--navy); min-height: 100vh; }
+
+/* Hero */
+.service-hero {
+  position: relative;
+  height: 420px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.service-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.service-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11,27,46,1) 0%, rgba(11,27,46,0.6) 50%, rgba(11,27,46,0.2) 100%);
+}
+.service-hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 2.5rem 0;
+}
+.service-hero-content .container { max-width: 900px; }
+.service-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(58,181,73,0.15);
+  border: 1px solid rgba(58,181,73,0.3);
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
+}
+.service-hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+.service-hero-content p {
+  font-size: 1.05rem;
+  color: var(--gray);
+  max-width: 580px;
+}
+
+/* Body */
+.service-body { padding: 4rem 0; }
+.service-body .container { max-width: 1100px; }
+.service-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 3rem;
+  align-items: start;
+}
+.service-main h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: var(--white);
+  margin: 2.5rem 0 0.75rem;
+}
+.service-main h2:first-child { margin-top: 0; }
+.service-main p { color: var(--gray); line-height: 1.8; margin-bottom: 1rem; }
+.service-main ul, .service-main ol { padding-left: 1.5rem; margin-bottom: 1.25rem; }
+.service-main li { color: var(--gray); margin-bottom: 0.5rem; line-height: 1.65; }
+.service-main strong { color: var(--white); }
+.service-tip {
+  background: rgba(58,181,73,0.08);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+/* Sidebar */
+.service-sidebar { position: sticky; top: 90px; }
+.sidebar-cta {
+  background: var(--navy2);
+  border: 1px solid rgba(58,181,73,0.25);
+  border-radius: 12px;
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.sidebar-cta h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+.sidebar-cta p { font-size: 0.875rem; color: var(--gray); margin-bottom: 1.25rem; }
+.sidebar-cta .btn { width: 100%; text-align: center; display: block; }
+.sidebar-includes {
+  background: var(--navy2);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+.sidebar-includes h5 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.sidebar-includes ul { list-style: none; padding: 0; }
+.sidebar-includes li {
+  font-size: 0.875rem;
+  color: var(--text);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.sidebar-includes li:last-child { border-bottom: none; }
+.sidebar-includes li::before { content: '✓'; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+
+/* Image gallery */
+.service-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.service-gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
+/* Back link */
+.back-link {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  transition: opacity 0.2s;
+}
+.back-link:hover { opacity: 0.75; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .service-layout { grid-template-columns: 1fr; }
+  .service-sidebar { position: static; }
+  .service-hero { height: 320px; }
+  .service-gallery { grid-template-columns: 1fr; }
+}

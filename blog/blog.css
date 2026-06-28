@@ -1,0 +1,98 @@
+.blog-post {
+  padding-top: 100px;
+  min-height: 100vh;
+  background: var(--navy);
+}
+.blog-post-inner {
+  max-width: 780px;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+.back-link {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  transition: opacity 0.2s;
+}
+.back-link:hover { opacity: 0.75; }
+.post-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(58,181,73,0.12);
+  border: 1px solid rgba(58,181,73,0.25);
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+.blog-post-inner h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.post-meta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  color: var(--gray);
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 2rem;
+}
+.post-body { color: var(--text); line-height: 1.8; }
+.post-body .lead {
+  font-size: 1.1rem;
+  color: var(--gray);
+  margin-bottom: 2rem;
+  line-height: 1.75;
+}
+.post-body h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--white);
+  margin: 2.5rem 0 0.75rem;
+}
+.post-body h3 {
+  font-size: 1.1rem;
+  color: var(--white);
+  margin: 2rem 0 0.5rem;
+}
+.post-body p { margin-bottom: 1rem; color: var(--gray); }
+.post-body ul, .post-body ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+.post-body li { color: var(--gray); margin-bottom: 0.5rem; }
+.post-body strong { color: var(--white); }
+.post-tip {
+  background: rgba(58,181,73,0.08);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.post-cta {
+  background: var(--navy2);
+  border: 1px solid rgba(58,181,73,0.25);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+.post-cta h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+.post-cta p { color: var(--gray); margin-bottom: 1.5rem; }
