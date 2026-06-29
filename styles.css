@@ -649,13 +649,19 @@ address { font-style: normal; }
   .nav-links {
     display: none;
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: var(--navy);
+    top: 70px; right: 0;
+    width: 260px;
+    background: rgba(11, 27, 46, 0.95);
+    backdrop-filter: blur(10px);
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
+    align-items: stretch;
+    gap: 0;
     z-index: 99;
+    border-radius: 0 0 0 var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1rem 0;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
   }
   .nav-links.open { display: flex; }
   .nav-links a { font-size: 1.1rem; padding: 0.75rem 1.5rem; }
