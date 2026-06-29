@@ -16,7 +16,7 @@
   --transition: 0.3s ease;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   font-family: 'Inter', sans-serif;
@@ -650,21 +650,27 @@ address { font-style: normal; }
     display: none;
     position: fixed;
     top: 70px; right: 0;
-    width: 260px;
-    background: rgba(11, 27, 46, 0.95);
-    backdrop-filter: blur(10px);
+    width: 200px;
+    background: rgba(11, 27, 46, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-end;
     gap: 0;
     z-index: 99;
     border-radius: 0 0 0 var(--radius);
     box-shadow: var(--shadow);
-    padding: 1rem 0;
+    padding: 0.75rem 0;
     max-height: calc(100vh - 70px);
     overflow-y: auto;
   }
   .nav-links.open { display: flex; }
-  .nav-links a { font-size: 1.1rem; padding: 0.75rem 1.5rem; }
+  .nav-links a {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    padding: 0.5rem 1.25rem;
+    text-align: right;
+  }
   .dropdown { position: static; background: none; border: none; box-shadow: none; padding: 0; }
   .process-steps { flex-direction: column; }
   .step-arrow { transform: rotate(90deg); }
@@ -684,11 +690,13 @@ address { font-style: normal; }
   .services-grid { grid-template-columns: 1fr !important; }
   .blog-grid { grid-template-columns: 1fr; }
   .faq-grid { grid-template-columns: 1fr; }
-  .majrpro-features { grid-template-columns: 1fr; }
-  .majrpro-crm-grid { grid-template-columns: 1fr; }
-  .majrpro-banner { padding: 1.5rem; }
+  .majrpro-features { grid-template-columns: 1fr !important; }
+  .majrpro-crm-grid { grid-template-columns: 1fr !important; }
+  .majrpro-banner { padding: 1.5rem; overflow: hidden; }
+  .majrpro-section { overflow: hidden; }
   .majrpro-logo { height: 80px; }
   .majrpro-content h2 { font-size: 1.4rem; }
+  .majrpro-cta { flex-direction: column; align-items: center; }
   .cta-inner h2 { font-size: 1.5rem; }
   .cta-buttons { flex-direction: column; align-items: center; }
 }
