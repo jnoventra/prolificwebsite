@@ -684,6 +684,13 @@ address { font-style: normal; }
     display: flex;
   }
   .nav-links.open { transform: translateX(0); }
+  .nav-links li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  .nav-links li:first-of-type:not(.nav-close-li) {
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
   .nav-links a {
     font-family: 'Inter', sans-serif;
     font-weight: 300;
@@ -691,9 +698,10 @@ address { font-style: normal; }
     padding: 1.15rem 2.5rem;
     text-align: left;
     width: 100%;
-    border-bottom: 1px solid rgba(255,255,255,0.15);
+    border: none;
     color: rgba(255,255,255,0.6);
     letter-spacing: 0.03em;
+    display: block;
   }
   .nav-links a:hover { color: var(--gold); }
   .nav-close-li { display: block; padding: 0 1rem 1rem; }
