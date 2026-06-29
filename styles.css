@@ -691,12 +691,15 @@ address { font-style: normal; }
     padding: 1.15rem 2.5rem;
     text-align: left;
     width: 100%;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.15);
     color: rgba(255,255,255,0.6);
     letter-spacing: 0.03em;
   }
   .nav-links a:hover { color: var(--gold); }
   .nav-close-li { display: block; padding: 0 1rem 1rem; }
+  .nav-links .btn-nav {
+    display: none !important;
+  }
   .dropdown { position: static; background: none; border: none; box-shadow: none; padding: 0; }
   .process-steps { flex-direction: column; }
   .step-arrow { transform: rotate(90deg); }
