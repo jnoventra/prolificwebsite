@@ -684,14 +684,15 @@ address { font-style: normal; }
   }
   .nav-links.open { transform: translateX(0); }
   .nav-links a {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 400;
-    font-size: 1.05rem;
-    padding: 1rem 2rem;
+    font-size: 1.15rem;
+    padding: 1.1rem 2rem;
     text-align: left;
     width: 100%;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    color: var(--text);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.02em;
   }
   .nav-links a:hover { color: var(--gold); }
   .nav-close-li { display: block; padding: 0 1rem 1rem; }
