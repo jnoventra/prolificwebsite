@@ -665,11 +665,26 @@ address { font-style: normal; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; text-align: center; }
   .compliance { text-align: center !important; }
-  .hero-stats { gap: 1.5rem; }
-  .trust-inner { gap: 1rem; }
+  .hero { min-height: auto; padding: 2rem 0; }
+  .hero-content { max-width: 100%; padding-top: 5rem; padding-bottom: 2rem; }
+  .hero h1 { font-size: 2rem; }
+  .hero-stats { gap: 1.5rem; flex-direction: column; }
+  .hero-cta { flex-direction: column; }
+  .hero-cta .btn { text-align: center; }
+  .hero-watermark { display: none; }
+  .trust-inner { gap: 1rem; flex-wrap: wrap; }
+  .trust-inner span { font-size: 0.7rem; }
+  .section { padding: 3rem 0; }
+  .services-grid { grid-template-columns: 1fr !important; }
+  .blog-grid { grid-template-columns: 1fr; }
   .faq-grid { grid-template-columns: 1fr; }
   .majrpro-features { grid-template-columns: 1fr; }
   .majrpro-crm-grid { grid-template-columns: 1fr; }
+  .majrpro-banner { padding: 1.5rem; }
+  .majrpro-logo { height: 80px; }
+  .majrpro-content h2 { font-size: 1.4rem; }
+  .cta-inner h2 { font-size: 1.5rem; }
+  .cta-buttons { flex-direction: column; align-items: center; }
 }
 
 /* ── MAJR Pro Section ── */
