@@ -685,15 +685,15 @@ address { font-style: normal; }
   }
   .nav-links.open { transform: translateX(0); }
   .nav-links a {
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
-    font-size: 1.15rem;
-    padding: 1.1rem 2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    padding: 1.15rem 2.5rem;
     text-align: left;
     width: 100%;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    color: rgba(255,255,255,0.7);
-    letter-spacing: 0.02em;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.03em;
   }
   .nav-links a:hover { color: var(--gold); }
   .nav-close-li { display: block; padding: 0 1rem 1rem; }
