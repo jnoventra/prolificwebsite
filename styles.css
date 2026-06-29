@@ -663,7 +663,8 @@ address { font-style: normal; }
 }
 
 @media (max-width: 700px) {
-  .hamburger { display: flex; }
+  .hamburger { display: flex; order: -1; }
+  .logo { flex: 1; justify-content: center; }
   .nav-links {
     position: fixed;
     top: 0; left: 0; bottom: 0;
