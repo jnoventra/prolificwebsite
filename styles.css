@@ -169,6 +169,24 @@ address { font-style: normal; }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 98;
+}
+.nav-overlay.open { display: block; }
+.nav-close-li { display: none; }
+.nav-close {
+  background: none;
+  border: none;
+  color: var(--gold);
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+}
+
 /* ── Hero ── */
 .hero {
   position: relative;
@@ -647,30 +665,36 @@ address { font-style: normal; }
 @media (max-width: 700px) {
   .hamburger { display: flex; }
   .nav-links {
-    display: none;
     position: fixed;
-    top: 70px; right: 0;
-    width: 200px;
-    background: rgba(11, 27, 46, 0.5);
+    top: 0; left: 0; bottom: 0;
+    width: 280px;
+    background: rgba(11, 27, 46, 0.97);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     gap: 0;
     z-index: 99;
-    border-radius: 0 0 0 var(--radius);
-    box-shadow: var(--shadow);
-    padding: 0.75rem 0;
-    max-height: calc(100vh - 70px);
+    box-shadow: 4px 0 30px rgba(0,0,0,0.5);
+    padding: 5rem 0 2rem;
     overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    display: flex;
   }
-  .nav-links.open { display: flex; }
+  .nav-links.open { transform: translateX(0); }
   .nav-links a {
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    padding: 0.5rem 1.25rem;
-    text-align: right;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1.05rem;
+    padding: 1rem 2rem;
+    text-align: left;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    color: var(--text);
   }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-close-li { display: block; padding: 0 1rem 1rem; }
   .dropdown { position: static; background: none; border: none; box-shadow: none; padding: 0; }
   .process-steps { flex-direction: column; }
   .step-arrow { transform: rotate(90deg); }

@@ -7,15 +7,26 @@ window.addEventListener('scroll', () => {
 // Mobile hamburger
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
+const navOverlay = document.getElementById('nav-overlay');
+const navClose = document.getElementById('nav-close');
+
+function openNav() {
+  hamburger.classList.add('open');
+  navLinks.classList.add('open');
+  navOverlay.classList.add('open');
+}
+function closeNav() {
+  hamburger.classList.remove('open');
+  navLinks.classList.remove('open');
+  navOverlay.classList.remove('open');
+}
 hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('open');
-  navLinks.classList.toggle('open');
+  navLinks.classList.contains('open') ? closeNav() : openNav();
 });
+navClose.addEventListener('click', closeNav);
+navOverlay.addEventListener('click', closeNav);
 navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    navLinks.classList.remove('open');
-  });
+  link.addEventListener('click', closeNav);
 });
 
 // FAQ accordion
